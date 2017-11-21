@@ -31,10 +31,10 @@ const appRoutes = [
   {
     path: 'programs', component: ProgramsComponent,
     children: [
-      { path: 'SCLA', component: SclaComponent, data:{ preload: true} },
-      { path: 'seals', component: SealsComponent, data:{ preload: true} },
-      { path: 'leadCs', component: LeadcsComponent, data:{ preload: true} },
-      { path: 'hustlencode', component: HackathonComponent, data:{ preload: true} },
+      { path: 'SCLA', component: SclaComponent, data: { preload: true} },
+      { path: 'seals', component: SealsComponent, data: { preload: true} },
+      { path: 'leadCs', component: LeadcsComponent, data: { preload: true} },
+      { path: 'hustlencode', component: HackathonComponent, data: { preload: true} },
       { path: '**', redirectTo: 'SCLA', pathMatch: 'full' }
     ]
   },
@@ -60,7 +60,7 @@ const appRoutes = [
   },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'article',
-    children:[
+    children: [
       {path: 'cultivating-steve-jobs', component: Article1Component},
       {path: 'tech-entrepreneur', component: Article2Component},
       {path: 'txt-labs', component: Article3Component}
@@ -68,11 +68,13 @@ const appRoutes = [
   {path: 'blog/:id', component: BlogDetailComponent},
   {path: 'blog', component: BlogComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
-]
+];
 
 
 @NgModule({
-  imports: [ ],
+  imports: [
+    RouterModule.forRoot(appRoutes)
+  ],
   exports: [
     RouterModule
   ]

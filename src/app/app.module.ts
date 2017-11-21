@@ -76,9 +76,9 @@ import { SclaRegisterComponent } from './scla-register/scla-register.component';
     BrowserModule,
     BrowserAnimationsModule,
     Angular2FontawesomeModule,
-    RoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RoutingModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, PreloadSelectedModulesList],
   bootstrap: [AppComponent]
