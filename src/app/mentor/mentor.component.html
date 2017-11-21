@@ -1,0 +1,201 @@
+<div class="summary">
+  <div class="columns main-content">
+    <div class="column text-left">
+      <h1 class="uppercase">Make an Impact Today!</h1>
+      <p>Mentors make themselves available to program participants for guidance and support during the college application process.
+        You can help our teens navigate high school, develop business ideas, and grow as young men and leaders. While you
+        should have experience working in the tech sector, no specific positions or programming skills are required. If you
+        would like to make a positive impact in the lives of deserving young men of color and want to help build positive
+        communities, sign up today! </p>
+    </div>
+    <div class="column img">
+      <img src="assets/get-involved/mentor.jpg" alt="">
+    </div>
+  </div>
+  <div class="notifcation">
+    <div class="notification is-info">
+      Submit this mentoring form so that we can further discuss ways that you can help us. Remember, you can always reach us at
+      <strong>info@urbantxt.com</strong>.
+    </div>
+  </div>
+
+  <div id="mentor-form">
+    <form (ngSubmit)="onSubmit(model)" #mentorForm="ngForm">
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded has-icons-left">
+              <input class="input" type="text" placeholder="Full Name" [ngClass]="{'input-error': input.fullname}" #fullname="ngModel"
+                name="fullname" id="fullname" [(ngModel)]="model.fullname" (blur)="inputCheck('fullname',fullname.valid)" required>
+              <span class="icon is-small is-left">
+                        <i class="fa fa-user"></i>
+                      </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded has-icons-left">
+              <input class="input" placeholder="Email" [ngClass]="{'input-error': input.email}" type="text" #email="ngModel" name="email"
+                id="email" required email [(ngModel)]="model.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                required>
+              <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                          </span>
+              <!-- <span class="icon is-small is-right">
+                            <i class="fa fa-check"></i>
+                          </span> -->
+            </p>
+          </div>
+          <div class="field is-expanded">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="tel" [ngClass]="{'input-error': input.phoneNumber}" placeholder="Phone number - 8182138000" #phoneNumber="ngModel"
+                  name="phoneNumber" [(ngModel)]="model.phoneNumber" [maxlength]='14' [minlength]='14' (keyup)="formatNumber(phoneNumber.model)"
+                  required (blur)="inputCheck('phoneNumber',phoneNumber.valid)" required>
+                <span class="icon is-small is-left">
+                                        <i class="fa fa-phone"></i>
+                                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded">
+              <input class="input" type="text" placeholder="Company you work for" [ngClass]="{'input-error': input.company}" #company="ngModel"
+                name="company" [(ngModel)]="model.company" (blur)="inputCheck('company',company.valid)" required>
+            </p>
+          </div>
+          <div class="field is-expanded">
+            <div class="field">
+              <p class="control is-expanded">
+                  <input class="input" type="text" placeholder="Position/Title?" [ngClass]="{'input-error': input.title}" #title="ngModel"
+                  name="title" [(ngModel)]="model.title" (blur)="inputCheck('title',title.valid)" required>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="Please list one reference from your current company (include phone number)"
+                [ngClass]="{'input-error': input.reference}" #reference="ngModel" name="reference" [(ngModel)]="model.reference"
+                (blur)="inputCheck('reference',reference.valid)" required>
+            </div>
+            <!-- <p class="help is-danger">
+                              This field is required
+                            </p> -->
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <textarea class="input" type="text" placeholder="Have you worked or volunteered with other youth programs? (please explain)"
+                [ngClass]="{'input-error': input.experience}" #experience="ngModel" name="experience" [(ngModel)]="model.experience"
+                (blur)="inputCheck('experience',experience.valid)" required></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <textarea class="input" type="text" placeholder="Why are you interested in mentoring a student?" [ngClass]="{'input-error': input.mentorInterest}"
+                #mentorInterest="ngModel" name="mentorInterest" [(ngModel)]="model.mentorInterest" (blur)="inputCheck('mentorInterest',mentorInterest.valid)"
+                required></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="How did you hear about TXT?" [ngClass]="{'input-error': input.hearAboutTxt}"
+                #hearAboutTxt="ngModel" name="hearAboutTxt" [(ngModel)]="model.hearAboutTxt" (blur)="inputCheck('hearAboutTxt',hearAboutTxt.valid)"
+                required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="field center">
+        <label class="label">What are your interests outside of work?</label>
+        <label class="checkbox"><input type="checkbox" #interests[0]="ngModel" name="interests" [(ngModel)]="model.interests[0]">Gaming</label>
+        <label class="checkbox"><input type="checkbox" #interests[1]="ngModel" name="interests" [(ngModel)]="model.interests[1]">Reading</label>
+        <label class="checkbox"><input type="checkbox" #interests[2]="ngModel" name="interests" [(ngModel)]="model.interests[2]">Drawing</label>
+        <label class="checkbox"><input type="checkbox" #interests[3]="ngModel" name="interests" [(ngModel)]="model.interests[3]">Coding</label>
+        <label class="checkbox"><input type="checkbox" #interests[4]="ngModel" name="interests" [(ngModel)]="model.interests[4]">Nature</label>
+        <label class="checkbox"><input type="checkbox" #interests[5]="ngModel" name="interests" [(ngModel)]="model.interests[5]">Sports</label>
+      </div> -->
+      <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input" type="text" placeholder="What are your interests/hobbies outside of work?" [ngClass]="{'input-error': input.interests}"
+                  #interests="ngModel" name="interests" [(ngModel)]="model.interests" (blur)="inputCheck('interests',interests.valid)"
+                  required>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="field center">
+        <label class="label">Mentors will meet with their mentee in-person once a month. Mentors should also maintain communication via phone call, email, text or social media platforms on a weekly basis. </label>
+        <div class="select">
+          <select [ngClass]="{'input-error': input.commitment}" #commitment="ngModel" name="commitment" [(ngModel)]="model.commitment"
+            (blur)="inputCheck('commitment',commitment.valid)" required>
+                <option value="Yes, I can meet with mentee once a month and maintain weekly communication">Yes, I can meet with mentee once a month and maintain weekly communication</option>
+                <option value="No, I have other commitments and can only mentor remotely">No, I have other commitments and can only mentor remotely</option>
+                <option value="I can meet with mentee more two times a month and maintain weekly communication">I can meet with mentee more two times a month and maintain weekly communication</option>
+                <option value="I am not sure what I can commit to, but would still like to get involved">I am not sure what I can commit to, but would still like to get involved</option>
+              </select>
+        </div>
+      </div>
+      <div class="field center">
+        <label class="label">I can mentor a student up to</label>
+        <div class="select">
+          <select [ngClass]="{'input-error': input.length}" #length="ngModel" name="length" [(ngModel)]="model.length" (blur)="inputCheck('length',length.valid)"
+            required>                
+                  <option value="6 months">6 months</option>
+                  <option value="12 months">12 months</option>
+                  <option value="18 months">18 months</option>
+                </select>
+        </div>
+      </div>
+      <div class="field center">
+        <label class="label">I am able to mentor</label>
+        <div class="select">
+          <select [ngClass]="{'input-error': input.student}" #student="ngModel" name="student" [(ngModel)]="model.student" (blur)="inputCheck('student',student.valid)"
+            required>                
+                
+                <option value="1 student">1 student</option>
+                <option value="2 students">2 students</option>
+                <option value="3 students">3 students</option>
+              </select>
+        </div>
+      </div>
+      <button class="button is-primary" [ngClass]="{'is-loading': submit}" *ngIf='checking' [disabled]="!mentorForm.valid || submit">
+        Submit
+      </button>
+      <div class="notification is-primary" *ngIf='success'>
+        <button class="delete" (click)="exit()"></button> Thank You. Your info has been submitted.
+      </div>
+      <div class="notification is-danger" *ngIf='failure'>
+        <button class="delete" (click)="exit()"></button> Unable to submit form at this time. Please try Again. If problems
+        persist please email <strong>roberto@urbantxt.com</strong>
+      </div>
+    </form>
+
+  </div>
+</div>

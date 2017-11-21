@@ -1,0 +1,320 @@
+.banner {
+    position: relative;
+    height: 65vh;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    content: '';
+    background-color: black !important;
+    background: url('../../assets/contact-us/banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+}
+
+.banner:before {
+    display: block;
+    height: 100%;
+    width: 100%;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    opacity: .45;
+}
+
+.banner h1 {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    text-transform: uppercase;
+    font-size: 5rem;
+    color: #fff;
+}
+#about-us {
+    margin-top: 50px;
+    padding: 0 125px;
+}
+#about-us h1 {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+#about-us .columns .column p{
+    font-size: 1rem;
+}
+#about-us ul {
+    list-style: none;
+    text-align: center;
+    border-bottom: solid 1px #EAEAEA;
+    height: 43px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+}
+
+#about-us ul li {
+    display: inline-block;
+    padding-bottom: 17px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#about-us ul li:hover {
+    color: #189EB3;
+    border-bottom: solid 2px #189EB3;
+}
+
+.about-us-active {
+    color: #189EB3;
+    border-bottom: solid 2px #189EB3;
+}
+
+
+#our-team-content {
+    position: relative;
+    border-bottom: solid 1px #EAEAEA;
+    padding-bottom: 25px;
+}
+
+#our-team-content * {
+    position: relative
+}
+
+#our-team-content .columns .column {
+    opacity: 0;
+    -webkit-animation: fadeIn 0.25s 1;
+    animation: fadeIn 0.5s 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+#our-team-content .row-1 .column:nth-child(1) {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+#our-team-content .row-1 .column:nth-child(2) {
+    -webkit-animation-delay: .50s;
+    animation-delay: .50s;
+}
+
+#our-team-content .row-1 .column:nth-child(3) {
+    -webkit-animation-delay: .75s;
+    animation-delay: .75s;
+}
+
+#our-team-content .row-2 .column:nth-child(1) {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+#our-team-content .row-2 .column:nth-child(2) {
+    -webkit-animation-delay: .50s;
+    animation-delay: .50s;
+}
+
+#our-team-content .row-2 .column:nth-child(3) {
+    -webkit-animation-delay: .75s;
+    animation-delay: .75s;
+}
+
+#our-team-content .row-3 .column:nth-child(1) {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1.0;
+        height: auto;
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+.img-content {
+    position: relative;
+    display: block;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.text {
+    display: inline-block;
+    height: 270px;
+    width: 270px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    opacity: 0;
+    padding-top: 125px;
+    text-align: center;
+    transition: opacity 0.5s ease;
+    animation: text-out .4s ease;
+    cursor: pointer;
+}
+
+.text * {
+    color: #fff;
+    text-align: cener;
+}
+
+.text h1 {
+    font-size: 28px;
+}
+
+.text p {
+    font-size: 16px;
+}
+
+
+/* the first row of the team */
+
+#our-team-content .row-1 .column:nth-child(1) .img-content {
+    background: url('../../assets/about-us/team/oscar.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#our-team-content .row-1 .column:nth-child(2) .img-content {
+    background: url('../../assets/about-us/team/roxanne.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#our-team-content .row-1 .column:nth-child(3) .img-content {
+    background: url('../../assets/about-us/team/roberto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* the second row of the team */
+
+#our-team-content .row-2 .column:nth-child(1) .img-content {
+    background: url('../../assets/about-us/team/michael.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -68px;
+}
+
+#our-team-content .row-2 .column:nth-child(2) .img-content {
+    background: url('../../assets/about-us/team/danny.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -14px
+}
+
+#our-team-content .row-2 .column:nth-child(3) .img-content {
+    background: url('../../assets/about-us/team/roberto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* the third row of the team */
+
+#our-team-content .row-3 .column:nth-child(1) .img-content {
+    background: url('../../assets/about-us/team/bagel.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.team {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.text:hover+.img-content:before {
+    position: relative;
+    content: '';
+    display: block;
+    width: 270px;
+    height: 270px;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.35);
+    animation: background-color 0.5s ease;
+}
+
+.text:hover+.img-content {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.text:hover {
+    padding-top: 100px;
+    opacity: 1;
+    animation: text-in 0.5s ease;
+}
+
+
+@media only screen and (max-width: 414px) {
+    .banner h1 {
+        position: absolute;
+        bottom: 0;
+        left: 25px;
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: #fff;
+    }
+    #about-us {
+        margin-top: 50px;
+        padding: 0 25px;
+    }
+    #about-us ul {
+        list-style: none;
+        text-align: center;
+        border-bottom: none;
+        height: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+    #about-us ul li {
+        display: inline-block;
+        padding-bottom: 17px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    
+    #about-us ul li:hover {
+        color: #189EB3;
+        border-bottom: none;
+    }
+    
+    .about-us-active {
+        color: #189EB3;
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,134 @@
+<div class="summary">
+  <div class="columns main-content">
+    <div class="column text-left">
+      <h1 class="uppercase">Become A part of transforming the future!</h1>
+      <p>As a non-profit, volunteered help is an integral part of what makes this organization successful. Aside from mentoring
+        opportunities, TXT has benefitted from volunteers who help with program administration, organizing and teaching workshops,
+        setting up field trips for the teens, marketing, fundraising, and many other ways. You can be a part of transforming
+        the future of the South LA tech scene, and empowering youth of color. </p>
+    </div>
+    <div class="column img">
+      <img src="assets/get-involved/volunteer.png" alt="">
+    </div>
+  </div>
+  <div class="notifcation">
+    <div class="notification is-info">
+      Submit this volunteering form so that we can further discuss ways that you can help us. Remember, you can always reach us
+      at <strong>info@urbantxt.com</strong>.
+    </div>
+  </div>
+
+  <div id="volunteer-form">
+    <form (ngSubmit)="onSubmit(model)" #volunteerForm="ngForm">
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded has-icons-left">
+              <input class="input" type="text" placeholder="Full Name" [ngClass]="{'input-error': input.fullname}"  #fullname="ngModel" name="fullname" id="fullname" [(ngModel)]="model.fullname" (blur)="inputCheck('fullname',fullname.valid)" required>
+              <span class="icon is-small is-left">
+                        <i class="fa fa-user"></i>
+                      </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded has-icons-left has-icons-right">
+                <input class="input" placeholder="Email" [ngClass]="{'input-error': input.email}" type="text" #email="ngModel" name="email" id="email" required email [(ngModel)]="model.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                required>
+              <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                          </span>
+              <!-- <span class="icon is-small is-right">
+                            <i class="fa fa-check"></i>
+                          </span> -->
+            </p>
+          </div>
+          <div class="field is-expanded">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                  <input class="input" type="tel" [ngClass]="{'input-error': input.phoneNumber}" placeholder="Phone number - 8182138000" #phoneNumber="ngModel" name="phoneNumber"  [(ngModel)]="model.phoneNumber" [maxlength]='14' [minlength]='14' (keyup)="formatNumber(phoneNumber.model)" required (blur)="inputCheck('phoneNumber',phoneNumber.valid)" required>                  
+                <span class="icon is-small is-left">
+                                        <i class="fa fa-phone"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="How did you hear about TXT?" [ngClass]="{'input-error': input.hearAboutTxt}" #hearAboutTxt="ngModel" name="hearAboutTxt" [(ngModel)]="model.hearAboutTxt" (blur)="inputCheck('hearAboutTxt',hearAboutTxt.valid)" required>
+            </div>
+            <!-- <p class="help is-danger">
+                          This field is required
+                        </p> -->
+          </div>
+        </div>
+      </div>
+      <div class="field center">
+          <label class="label">How would you like to help TXT?</label>
+          <div class="select">
+              <select [ngClass]="{'input-error': input.howToHelp}" #howToHelp="ngModel" name="howToHelp" [(ngModel)]="model.howToHelp" (blur)="inputCheck('howToHelp',howToHelp.valid)" required>
+                <option value="workshops">Workshops</option>
+                <option value="fundraising">Fundraising</option>
+                <option value="program Administration">Program Administration</option>
+                <option value="field Trips">Field Trips</option>
+                <option value="marketing">Marketing</option>
+                <option value="hackathon">Hackathon</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+        </div>
+
+
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" placeholder="Explain your experience with computers/programming"  [ngClass]="{'input-error': input.experience}" #experience="ngModel" name="experience" [(ngModel)]="model.experience" (blur)="inputCheck('experience',experience.valid)" required></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <textarea class="textarea" placeholder="What inspired you to volunteer?" name="volunteerInspiration" [ngClass]="{'input-error': input.volunteerInspiration}" #volunteerInspiration="ngModel" [(ngModel)]="model.volunteerInspiration" (blur)="inputCheck('volunteerInspiration',volunteerInspiration.valid)" required></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea" placeholder="Is there anything else that we can do for you? Anything else we should know about you? Questions?" name="comments" [ngClass]="{'input-error': input.comments}" #comments="ngModel" [(ngModel)]="model.comments" (blur)="inputCheck('comments',comments.valid)" required></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [disabled]="!volunteerForm.valid || submit" -->
+          <button class="button is-primary"  [ngClass]="{'is-loading': submit}" *ngIf='checking' [disabled]="!volunteerForm.valid || submit">
+              Submit
+            </button>
+            <div class="notification is-primary" *ngIf='success'>
+                <button class="delete" (click)="exit()"></button>
+                Thank You. Your info has been submitted.
+            </div>
+            <div class="notification is-danger" *ngIf='failure'>
+                <button class="delete" (click)="exit()"></button>
+                Unable to submit form at this time. Please try Again. 
+                If problems persist please email <strong>roberto@urbantxt.com</strong>
+            </div>
+
+      </form>
+  </div>
+</div>

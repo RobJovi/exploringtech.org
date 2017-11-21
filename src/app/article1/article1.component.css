@@ -1,0 +1,110 @@
+.banner {
+    position: relative;
+    height: 65vh;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    content: '';
+    background-color: black !important;
+    background: url('../../assets/article/article-1/banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+}
+
+.banner:before {
+    display: block;
+    height: 100%;
+    width: 100%;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    opacity: .45;
+}
+
+.banner h1 {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.summary {
+    margin-top: 35px;
+    padding: 0 125px;
+    font-size: 1.2rem;
+}
+
+.summary .center {
+    text-align: center;
+}
+#contact-us{
+    margin-top: 50px;
+    padding: 25px 125px;
+}
+.button.is-primary{
+    display: block;
+    margin: auto;
+    background-color: #189EB3;
+}
+.button.is-primary:hover{
+    color: #189EB3;
+    border: solid thin #189EB3;
+    background-color: transparent;
+}
+.input.is-active, .input.is-focused, .input:active, .input:focus, .textarea.is-active, .textarea.is-focused, .textarea:active, .textarea:focus {
+    
+        border-color: #189EB3;
+        -webkit-box-shadow: 0 0 0 .125em rgba(0,209,178,.25);
+        box-shadow: 0 0 0 .125em rgba(0,209,178,.25);
+    
+}
+.input-error{
+    border: solid thin #ff0000;
+}
+.input-success{
+    border: solid thin #189EB3;
+}
+
+.summary{
+    margin-top: 100px;
+    padding: 0 125px 0 125px;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.main-content .column h1{
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.main-content{
+    padding-bottom: 45px;
+    border-bottom: solid 1px #189EB3;
+    margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 414px) {
+    .banner h1 {
+        position: absolute;
+        bottom: 0;
+        left: 25px;
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: #fff;
+    }
+    #contact-us{
+        margin-top: 50px;
+        padding: 25px 25px;
+    }
+    .summary {
+        padding:0 35px;
+    }
+}

@@ -1,0 +1,24 @@
+.summary{
+    padding: 0 125px 0 125px;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.main-content .column h1{
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.main-content{
+    padding-bottom: 45px;
+    border-bottom: solid 1px #189EB3;
+    margin-bottom: 75px;
+}
+@media only screen and (max-width: 414px) {
+    .summary {
+        padding:0 35px;
+    }
+
+}

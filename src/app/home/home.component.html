@@ -1,0 +1,394 @@
+<div class="content">
+  <div class="carousel-class">
+    <!-- ARTCILE 1 SLIDE -->
+    <div class="slide" [ngClass]="{'hide-slide': hiddenSlide[0]}">
+      <div class="slider-overlay"></div>
+      <div class="slide-img">
+        <img [src]="sliderImg[0]" alt="">
+      </div>
+      <div class="slide-content" [ngClass]="{'hide-content': hiddenContent[0]}">
+        <h2 class="title-animate title-1 reset white" [ngClass]="{'title-animate-go': slides0[0]}"><span>Cultivating the </span>
+          <span>“Steve Jobs” of South Central</span>
+        </h2>
+        <h5 class="title-animate title-2 reset white" [ngClass]="{'title-animate-go': slides0[1]}">
+          <span>Although the Summer Coding Leadership Academy is over, the TXT'ers dedication to their community is not.</span>
+        </h5>
+        <hr class="title-seperator title-animate title-3 reset" [ngClass]="{'title-animate-go': slides0[2]}">
+        <span style="text-align:center" class="title-animate title-4 reset" [ngClass]="{'title-animate-go': slides0[3]}">
+                        <a href="#" class="article-btn btn-white" [routerLink]="['/article', 'cultivating-steve-jobs']">Read Full Article</a>
+                    </span>
+      </div>
+    </div>
+    <!-- ARTCILE 2 SLIDE -->
+    <div class="slide" [ngClass]="{'hide-slide': hiddenSlide[1]}">
+      <div class="slider-overlay"></div>
+      <div class="slide-img">
+        <div class="img-container">
+          <img [src]="sliderImg[1]" alt="">
+        </div>
+      </div>
+      <div class="slide-content" [ngClass]="{'hide-content': hiddenContent[1]}">
+        <h2 class="title-animate title-1 reset white" [ngClass]="{'title-animate-go': slides1[0]}"><span>Tech Entrepreneur </span>
+          <span>in South Central L.A.</span>
+        </h2>
+        <h5 class="title-animate title-2 reset white" [ngClass]="{'title-animate-go': slides1[1]}">
+          <span>Recently we were featured in an article on the California Health Report</span>
+        </h5>
+        <hr class="title-seperator title-animate title-3 reset" [ngClass]="{'title-animate-go': slides1[2]}">
+        <span style="text-align:center" class="title-animate title-4 reset" [ngClass]="{'title-animate-go': slides1[3]}">
+                    <a href="#" class="article-btn btn-white" [routerLink]="['/article', 'tech-entrepreneur']">Read Full Article</a>
+                </span>
+      </div>
+    </div>
+    <!-- ARTCILE 3 SLIDE -->
+    <div class="slide" [ngClass]="{'hide-slide': hiddenSlide[2]}">
+      <div class="slider-overlay"></div>
+      <div class="slide-img">
+        <img [src]="sliderImg[2]" alt="">
+      </div>
+      <div class="slide-content" [ngClass]="{'hide-content': hiddenContent[2]}">
+        <h2 class="title-animate title-1 reset white" [ngClass]="{'title-animate-go': slides2[0]}"><span>Providing Opportunities </span>
+          <span>for South Central Youth</span>
+        </h2>
+        <h5 class="title-animate title-2 reset white" [ngClass]="{'title-animate-go': slides2[1]}">
+          <span>TXT Labs is a consulting firm specializing in software development... </span>
+        </h5>
+        <hr class="title-seperator title-animate title-3 reset" [ngClass]="{'title-animate-go': slides2[2]}">
+        <span style="text-align:center" class="title-animate title-4 reset" [ngClass]="{'title-animate-go': slides2[3]}">
+                    <a href="#" class="article-btn btn-white" [routerLink]="['/article', 'txt-labs']">Read Full Article</a>
+        </span>
+      </div>
+    </div>
+    <i class="fa fa-chevron-right fa-2x" (click)="next()"></i>
+    <i class="fa fa-chevron-left fa-2x" (click)="prev()"></i>
+    <ul class="slide-indicators">
+      <li [ngClass]="{'active-indicator': (currentSlide == 0)}" (click)="indicatorClick(0)"></li>
+      <li [ngClass]="{'active-indicator': (currentSlide == 1)}" (click)="indicatorClick(1)"></li>
+      <li [ngClass]="{'active-indicator': (currentSlide == 2)}" (click)="indicatorClick(2)"></li>
+    </ul>
+  </div>
+
+
+  <div id="about-us" class="content-section">
+    <div class="header">
+      <h1>Why we serve young men of color</h1>
+      <hr class="title-seperator-programs">
+    </div>
+    <div class="columns">
+      <div class="column">
+        <p>We inspire young at risk Black and Brown boys to become technology entrepreneurs. These boys are at the highest risk
+          of dropping out of HS and being incarcerated.</p>
+      </div>
+    </div>
+
+    <div class="cycle">
+      <div class="arrow arrow-1">
+        <img src="assets/circle/Arrow.png" alt="">
+      </div>
+      <div class="arrow arrow-2">
+        <img src="assets/circle/Arrow.png" alt="">
+      </div>
+      <div class="arrow arrow-3">
+        <img src="assets/circle/Arrow.png" alt="">
+      </div>
+
+      <div class="arrow arrow-4">
+        <img src="assets/circle/Arrow.png" alt="">
+      </div>
+      <div class="arrow arrow-5">
+        <img src="assets/circle/Arrow.png" alt="">
+      </div>
+      <div class="arrow arrow-6">
+        <img src="assets/circle/Arrow.png" alt="">
+      </div>
+      <div class="arrow arrow-7">
+        <img src="assets/circle/Arrow.png" alt="">
+      </div>
+
+      <div class="cycle-1 cycle-styles" [ngClass]="{'circle-is-active': showContent[1]}" (click)="showInfo(1)" (mouseenter)="hoverCircle(1)"
+        (mouseleave)="hoverCircleAlt(1,showContent[1])">
+        <img [src]="imgSrc[0]" alt="">
+      </div>
+      <div class="cycle-2 cycle-styles" [ngClass]="{'circle-is-active': showContent[2]}" (click)="showInfo(2)" (mouseenter)="hoverCircle(2)"
+        (mouseleave)="hoverCircleAlt(2,showContent[2])">
+        <img [src]="imgSrc[1]" alt="">
+      </div>
+      <div class="cycle-3 cycle-styles" [ngClass]="{'circle-is-active': showContent[3]}" (click)="showInfo(3)" (mouseenter)="hoverCircle(3)"
+        (mouseleave)="hoverCircleAlt(3,showContent[3])">
+        <img [src]="imgSrc[2]" alt="">
+      </div>
+      <div class="cycle-4 cycle-styles" [ngClass]="{'circle-is-active': showContent[4]}" (click)="showInfo(4)" (mouseenter)="hoverCircle(4)"
+        (mouseleave)="hoverCircleAlt(4,showContent[4])">
+        <img [src]="imgSrc[3]" alt="">
+      </div>
+      <div class="cycle-5 cycle-styles" [ngClass]="{'circle-is-active': showContent[5]}" (click)="showInfo(5)" (mouseenter)="hoverCircle(5)"
+        (mouseleave)="hoverCircleAlt(5,showContent[5])">
+        <img [src]="imgSrc[4]" alt="">
+      </div>
+      <div class="cycle-6 cycle-styles" [ngClass]="{'circle-is-active': showContent[6]}" (click)="showInfo(6)" (mouseenter)="hoverCircle(6)"
+        (mouseleave)="hoverCircleAlt(6,showContent[6])">
+        <img [src]="imgSrc[5]" alt="">
+      </div>
+      <div class="cycle-7 cycle-styles" [ngClass]="{'circle-is-active': showContent[7]}" (click)="showInfo(7)" (mouseenter)="hoverCircle(7)"
+        (mouseleave)="hoverCircleAlt(7,showContent[7])">
+        <img [src]="imgSrc[6]" alt="">
+      </div>
+      <div class="centerCircle">
+        <div class="content content-1" [ngClass]="{'show-animation': showContent[1]}">
+          <p>Participate in the Summer Coding Leadership Academy (SCLA) & ongoing programs throughout the school year.</p>
+        </div>
+        <div class="content content-2" [ngClass]="{'show-animation': showContent[2]}">
+          <p>Become a SEAL, a coach in training for SCLA.</p>
+        </div>
+        <div class="content content-3" [ngClass]="{'show-animation': showContent[3]}">
+          <p>Attend college & potentially major in STEM.</p>
+        </div>
+        <div class="content content-4" [ngClass]="{'show-animation': showContent[4]}">
+          <p>Return to TXT during college to intern as a paid coach for SCLA.</p>
+        </div>
+        <div class="content content-5" [ngClass]="{'show-animation': showContent[5]}">
+          <p>Graduate college with degrees in STEM.</p>
+        </div>
+        <div class="content content-6" [ngClass]="{'show-animation': showContent[6]}">
+          <p>Successfully compete in the STEM job market & secure a career.</p>
+        </div>
+        <div class="content content-7" [ngClass]="{'show-animation': showContent[7]}">
+          <p>Give back to TXT as a volunteer or donor to invest in the next generation of leaders.</p>
+        </div>
+        <h1 [ngClass]="{'show-animation': showContent[0]}" class="init">the cycle of reciprocity</h1>
+        <img [ngClass]="{'show-animation': showContent[0]}" src="assets/img/txt-home-logo.png" alt="" class="init">
+      </div>
+    </div>
+  </div>
+  <div id="programs" class="content-section">
+    <div class="header">
+      <h1>Our Programs</h1>
+      <hr class="title-seperator-programs">
+    </div>
+
+    <div class="columns row-1 is-multiline">
+      <div class="column is-half-tablet is-half-desktop">
+        <a href="#" [routerLink]="['/programs']">
+          <div class="program-overlay">
+            <div></div>
+          </div>
+          <div class="program-content">
+            <p>Summer Coding Leadership Academy (SCLA) </p>
+          </div>
+          <div class="program-img">
+            <img src="assets/programs/SCLA.jpg" alt="">
+          </div>
+        </a>
+      </div>
+
+
+      <div class="column is-half-tablet is-half-desktop">
+        <a href="#" [routerLink]="['/programs']">
+          <div class="program-overlay">
+            <div></div>
+          </div>
+          <div class="program-content">
+            <p>Seals Program</p>
+          </div>
+          <div class="program-img">
+            <img src="assets/programs/seals.jpg" alt="">
+          </div>
+        </a>
+      </div>
+
+      <div class="column is-half-tablet is-half-desktop">
+        <a href="#" [routerLink]="['/programs']">
+          <div class="program-overlay">
+            <div></div>
+          </div>
+          <div class="program-content">
+            <p>Lead Computer Science</p>
+          </div>
+          <div class="program-img">
+            <img src="assets/programs/lead.jpg" alt="">
+          </div>
+        </a>
+      </div>
+
+
+      <div class="column is-half-tablet is-half-desktop">
+        <a href="#" [routerLink]="['/programs']">
+          <div class="program-overlay">
+            <div></div>
+          </div>
+          <div class="program-content">
+            <p>Hustle N Code </p>
+          </div>
+          <div class="program-img">
+            <img src="assets/programs/hackathon.jpg" alt="">
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+  <div id="get-invovled">
+    <div class="header">
+      <h1>Get Involved</h1>
+      <hr class="title-seperator-programs">
+
+    </div>
+    <div class="columns">
+      <div class="column is-2  heart circle-icon">
+        <fa name="heart"></fa>
+      </div>
+      <div class="column text-icon">We are a non-profit organization and every little bit helps. We have made it easy for your to donate to our cause.
+        Please help us keep our program alive by donating any amount.
+        <div class="link"><a class="button is-primary" href="https://txt.networkforgood.com/" target="_blank">Donate</a> </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-2 users circle-icon">
+        <fa name="users"></fa>
+      </div>
+      <div class="column text-icon">Just because you don't know design or programming it does not mean you can't help us organize events, run the program
+        or coordinate meetings and more.
+        <div class="link"><a class="button is-primary" href="#" [routerLink]="['/getInvolved','volunteer']">Volunteer</a> </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-2 cap circle-icon">
+        <fa name="graduation-cap"></fa>
+      </div>
+      <div class="column text-icon">Are you a passionate professional in the technology industry? You can make a difference in a teen's life by contributing
+        your time and expertise as part of our weekly workshops. Contact us and let us know how you can help.
+        <div class="link"><a class="button is-primary" href="#" [routerLink]="['/getInvolved','mentor']">Mentor</a> </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-2 terminal circle-icon">
+        <fa name="terminal"></fa>
+      </div>
+      <div class="column text-icon">As a TXT fellow, you will grow as an individual while inspiring the next generation of tech entrepreneurs to develop
+        solutions for social problems in low-income communities.
+        <div class="link"><a class="button is-primary" href="#" [routerLink]="['/getInvolved','fellowship']">Fellowship</a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="newsletter">
+    <h1>subscribe to our newsletter</h1>
+    <form (ngSubmit)="onSubmit(email)" #newsletterForm="ngForm">
+      <div class="field">
+        <label class="label">Email Address</label>
+        <div class="control">
+          <input class="input" type="text" #email="ngModel" name="email" id="email" required email [(ngModel)]="model.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+            required>
+        </div>
+
+        <!-- [disabled]="!volunteerForm.valid || submit" -->
+        <button class="button is-success" [ngClass]="{'is-loading': submit}" *ngIf='checking' [disabled]="!newsletterForm.valid || submit">
+                      Subscribe
+                    </button>
+      </div>
+      <div class="notification is-primary" *ngIf='success'>
+        <button class="delete" (click)="exit()"></button> Thank You. Your info has been submitted.
+      </div>
+      <div class="notification is-danger" *ngIf='failure'>
+        <button class="delete" (click)="exit()"></button> Unable to submit form at this time. Please try Again. If problems
+        persist please email <strong>roberto@urbantxt.com</strong>
+      </div>
+    </form>
+  </div>
+  <!-- <div id="blog">
+        <div class="header">
+            <h1>From Our Blog</h1>
+            <hr class="title-seperator-programs">
+        </div>
+            <div class="columns is-centered">
+                <div class="column is-3">
+                    <h1 class="blog-title">This is a sample blog title</h1>
+                    <p  class="desc">A brief desceription of the blog. Two to three sentences....</p>
+                    <p  class="author"></p>
+                </div>
+                <div class="column is-3">
+                        <h1 class="blog-title">This is a sample blog title</h1>
+                        <p  class="desc">A brief desceription of the blog. Two to three sentences....</p>
+                        <p  class="author"></p>
+                </div>
+                <div class="column is-3">
+                        <h1 class="blog-title">This is a sample blog title</h1>
+                        <p  class="desc">A brief desceription of the blog. Two to three sentences....</p>
+                        <p  class="author"></p>
+                </div>
+            </div>
+    </div> -->
+  <div id="sponsers">
+    <div class="header">
+      <h1>Meet Our Sponsers</h1>
+      <hr class="title-seperator-programs">
+    </div>
+    <div class="columns is-mobile is-multiline is-centered">
+      <div class="column is-half-mobile">
+        <a href="https://www.gotinder.com/" target="_blank">
+          <img src="assets/sponsers/tinder.png" alt="">
+        </a>
+      </div>
+      <div class="column is-half-mobile">
+        <a href="https://www.snapchat.com/">
+        <img src="assets/sponsers/snapchat.png" alt="">
+      </a>
+      </div>
+      <div class="column is-half-mobile">
+        <a href="https://www.google.com/" target="_blank">
+        <img src="assets/sponsers/google.png" alt="">
+      </a>
+      </div>
+      <div class="column is-half-mobile">
+        <a href="http://www.honda.com/">
+        <img src="assets/sponsers/honda.png" alt="">
+      </a>
+      </div>
+      <div class="column is-half-mobile">
+        <a href="https://www.facebook.com/" target="_blank">
+        <img src="assets/sponsers/facebook2.png" alt="">
+      </a>
+      </div>
+    </div>
+    <div class="columns is-centered is-multiline is-mobile">
+      <div class="column is-half-mobile">
+        <a href="http://www.nba.com/lakers/" target="_blank">
+        <img src="assets/sponsers/lakers.png" alt="">
+      </a>
+      </div>
+      <div class="column is-half-mobile">
+        <a href="https://www.usc.edu/" target="_blank">
+        <img src="assets/sponsers/usc.png" alt="">
+      </a>
+      </div>
+      <div class="column is-half-mobile">
+        <a href="https://www.subaru.com" target="_blank">
+        <img src="assets/sponsers/subaru.png" alt="">
+      </a>
+      </div>
+      <div class="column is-half-mobile">
+        <a href="https://www.verizon.com/home/verizonglobalhome/ghp_landing.aspx" target="_blank">
+        <img src="assets/sponsers/verizon.png" alt="">
+      </a>
+      </div>
+      <div class="column is-half-mobile">
+        <a href="https://www.dollarshaveclub.com/" target="_blank">
+        <img src="assets/sponsers/shave.png" alt="">
+      </a>
+      </div>
+    </div>
+    <div class="columns is-centered is-multiline is-mobile">
+      <div class="column is-2-desktop is-half-mobile">
+        <a href="https://www.sce.com/wps/portal/home/!ut/p/b1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOIt3Q1cPbz8DTzdQwKNDTyNAw38gh0djQ0MzIAKIoEKDHAARwNC-sP1o8BK8JjgpR-VnpOfBHZNpGNekrFFun5UUWpaalFqkV5pEVA4o6SkoNhK1UDVoLy8XC89Pz89J1UvOT9X1QCbloz84hL9CFSV-gW5EQa6UUmV5Y6KigATG3gA/dl4/d5/L2dBISEvZ0FBIS9nQSEh/"
+          target="_blank">
+        <img src="assets/sponsers/edison.png" alt="">
+      </a>
+      </div>
+      <div class="column is-2-desktop is-half-mobile">
+        <a href="https://www.good.is/" target="_blank">
+        <img src="assets/sponsers/good.png" alt="">
+      </a>
+      </div>
+    </div>
+  </div>
+</div>

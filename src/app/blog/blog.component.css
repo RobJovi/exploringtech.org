@@ -1,0 +1,156 @@
+
+
+.banner {
+    position: relative;
+    height: 65vh;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    content: '';
+    background-color: black !important;
+    background: url('../../assets/blog/banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+}
+
+.banner:before {
+    display: block;
+    height: 100%;
+    width: 100%;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    opacity: .65;
+}
+
+.banner h1 {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.summary {
+    margin-top: 35px;
+    padding: 0 125px;
+    font-size: 1.2rem;
+}
+
+.summary .center {
+    text-align: center;
+}
+#contact-us{
+    margin-top: 50px;
+    padding: 25px 125px;
+}.notification.is-primary{
+    background-color: #189EB3;
+}
+.button.is-primary{
+    display: block;
+    margin: auto;
+    background-color: #189EB3;
+}
+.button.is-primary:hover{
+    color: #189EB3;
+    border: solid thin #189EB3;
+    background-color: transparent;
+}
+.input.is-active, .input.is-focused, .input:active, .input:focus, .textarea.is-active, .textarea.is-focused, .textarea:active, .textarea:focus {
+    
+        border-color: #189EB3;
+        -webkit-box-shadow: 0 0 0 .125em rgba(0,209,178,.25);
+        box-shadow: 0 0 0 .125em rgba(0,209,178,.25);
+    
+}
+.input-error{
+    border: solid thin #ff0000;
+}
+.input-success{
+    border: solid thin #189EB3;
+}
+
+
+#blog{
+    padding: 50px 75px;
+    background-color: #F6F6F6;
+}
+.description{
+    height: 50px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.column{
+    margin-top: 25px;
+}
+.content{
+    border: solid thin #D6D6D6;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.content h1{
+    padding-top: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.padding{
+    margin-top: 15px;
+    padding: 0 25px 25px 25px;
+}
+.date p{
+    font-size: 12px;
+    font-weight: 600;
+}
+.author img{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    vertical-align: middle;
+
+}
+.author span{
+    font-size: 12px;
+    font-weight: 600;
+}
+.hover:hover{
+    color: #189EB3;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+.scale_hover:hover img{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+.scale_hover:hover + .padding div .hover{
+    transition: all 0.5s ease;
+    color: #189EB3;
+}
+.img{
+    cursor: pointer;
+    width:100%;
+    height: 150px;
+    overflow: hidden;
+}
+@media only screen and (max-width: 414px) {
+    .banner h1 {
+        position: absolute;
+        bottom: 0;
+        left: 25px;
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: #fff;
+    }
+    #contact-us{
+        margin-top: 50px;
+        padding: 25px 25px;
+    }
+}

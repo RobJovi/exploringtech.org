@@ -1,0 +1,112 @@
+<!-- Navigation bar -->
+<nav class="navbar nav-fixed-top" [ngClass]="{'moving': moving}">
+  <!-- Navigation image logo -->
+  <div class="navbar-brand">
+    <a routerLink="/home" class="navbar-item">
+      <img [src]="logo" alt="TXT logo">
+    </a>
+  <!-- Navigation burger menu -->
+  <div class="navbar-burger burger" data-target="navMenuTransparentExample" (click)="showMenu()" [ngClass]="{'is-active': menuActive}">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <!-- Navigation Links  -->
+  <div id="navMenuTransparentExample" class="navbar-menu" [ngClass]="{'is-active': menuActive}">
+    <div class="navbar-end">
+      <a class="navbar-item " [routerLink]="['/about-us']" routerLinkActive="is-active" (click)="closeMenu()">
+        About Us
+      </a>
+      <a class="navbar-item " href="#" [routerLink]="['/programs']" routerLinkActive="is-active" (click)="closeMenu()">
+        Programs
+      </a>
+      <a class="navbar-item " [routerLink]="['/getInvolved']" routerLinkActive="is-active" (click)="closeMenu()">
+        Get Involved
+      </a>
+      <a class="navbar-item " href="#" [routerLink]="['/contact-us']" routerLinkActive="is-active" (click)="closeMenu()">
+        Contact us
+      </a>
+      <a href="https://txt.networkforgood.com/" target="_blank" class="donate" id="donate" (click)="closeMenu()">
+          <span> Donate <fa name="heart"></fa></span>
+      </a>
+    </div>
+  </div>
+</nav>
+<!-- Content inserted dynamically here -->
+<router-outlet id="main-content"></router-outlet>
+<!-- Website Footer -->
+<div class="footer">
+  <div class="columns">
+    <!-- Summary column -->
+    <div class="column summary">
+      <img src="assets/img/logo-white.png" alt="">
+      <p>We serve young men of color between the 7th and 11th grade who are from low income communities. Since 2009, we’ve used
+        the concept of developing strong teams as a way for our young men to learn about collaboration, ideation, and long-lasting
+        life skills. In small teams, our youths learn the process of taking an idea from concept to market.</p>
+      <p><a href="#">http://exploringtech.org/</a></p>
+    </div>
+    <!-- Address column -->
+    <div class="column second">
+      <h1>OUR HACKER SPACE</h1>
+      <p>3655 South Grand Ave.</p>
+      <p>Los Angeles, CA 90007 Ste. 220</p>
+      <p>info@urbantxt.com</p>
+    </div>
+    <!-- Email Subscribe column -->
+    <div class="column third">
+      <h1>SUBSCRIBE</h1>
+      <div class="field has-addons">
+          <!-- Email Subscribe form -->
+          <form (ngSubmit)="onSubmit(email)" #newsletterForm="ngForm" style="display:flex;">
+            <div class="control">
+              <input class="input" type="text" [ngClass]="{'input-error': input.email}" #email="ngModel" name="email" id="email" required email [(ngModel)]="model.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+              required>
+            </div>
+            <button class="button is-primary" [ngClass]="{'is-loading': submit}" [disabled]="!email.valid || submit">
+              Submit
+           </button>
+            <br/>
+          </form>
+      </div>
+      <!-- Success notifcation -->
+      <div class="notification is-primary" *ngIf='success'>
+          <button class="delete" (click)="exit()"></button>
+          Thank You. Your info has been submitted.
+      </div>
+      <!-- Failure notifcation -->
+      <div class="notification is-danger" *ngIf='failure'>
+          <button class="delete" (click)="exit()"></button>
+          Unable to submit form at this time. Please try Again. 
+          If problems persist please email <strong>roberto@urbantxt.com</strong>
+      </div>
+      <h1>CONNECT</h1>
+      <ul class="social-media">
+        <li>
+          <a href="#">
+            <fa name="facebook"></fa>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <fa name="twitter"></fa>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <fa name="instagram"></fa>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <fa name="youtube"></fa>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- copyright -->
+  <div class="copyright">
+    <p>© 2017 Teens Exploring Technology ALL RIGHTS RESERVED</p>
+  </div>
+</div>

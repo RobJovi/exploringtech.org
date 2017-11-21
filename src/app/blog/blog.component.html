@@ -1,0 +1,35 @@
+<div class="blog-content">
+  
+    <div class="banner">
+      <h1>Where innovation happens</h1>
+    </div>
+  
+    <div id="blog">
+      <div class="columns is-multiline ">
+        <div class="column is-4-desktop is-4-tablet" *ngFor="let blog of blogs">
+          <div class="content">
+              <div class="img scale_hover" (click)="changeRoute(blog)">
+                  <img [src]="blog.imgURL" >
+              </div>
+              <div class="padding">
+                  <div class="date">
+                      <p>{{blog.date | date}}</p>
+                    </div>
+                  <div class="title">
+                      <h1 class="hover">{{blog.title}}</h1>
+                  </div>
+                    <hr class="seperator">
+                    <!-- <div class="description">
+                      <p>{{blog.content}}</p>
+                    </div> -->
+                    <div class="author">
+                      <img [src]="blog.author_img_url">
+                      <span> by <span class="hover">{{blog.author}}</span></span>
+                    </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

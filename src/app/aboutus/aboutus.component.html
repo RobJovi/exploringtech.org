@@ -1,0 +1,138 @@
+<div class="aboutUs-content">
+
+  <div class="banner">
+    <h1>About Us</h1>
+  </div>
+
+  <div id="about-us" class="content-section">
+    <ul class="noselect">
+      <li [ngClass]="{'about-us-active': links[0]}" (click)="aboutUsContentChange(0)" class="noselect">About Us</li>
+      <li [ngClass]="{'about-us-active': links[1]}" (click)="aboutUsContentChange(1)" class="noselect">Our Story</li>
+      <li [ngClass]="{'about-us-active': links[2]}" (click)="aboutUsContentChange(2)" class="noselect">Our Mission</li>
+      <li [ngClass]="{'about-us-active': links[3]}" (click)="aboutUsContentChange(3)" class="noselect">Our Team</li>
+    </ul>
+    <div id="about-us-content" [@flyInOut]="currentState[0]">
+      <div class="columns">
+        <div class="column">
+          <img src="assets/about-us/about-us-1.jpeg" alt="">
+        </div>
+        <div class="column">
+          <p>We serve young men of color between the 7th and 11th grade who are from low income communities. Since 2009, we’ve
+            used the concept of developing strong teams as a way for our young men to learn about collaboration, ideation,
+            and long-lasting life skills. In small teams our youths learn the process of taking an idea from concept to market.</p>
+          <p>We use coding as the catalyst that can take young men of color and turn them into technology leaders who build
+            positive communities. To us, computer programming is the tool that helps our teens learn how to learn, to develop
+            discipline, and to build confidence.</p>
+        </div>
+      </div>
+    </div>
+    <div id="our-story-content" [@flyInOut]="currentState[1]">
+      <div class="columns columns-padding">
+        <div class="column">
+          <img src="assets/about-us/our-story-1.jpeg" alt="">
+        </div>
+        <div class="column">
+          <p>Teens Exploring Technology (TXT) was founded by Oscar Menjivar, a graduate of Jordan High School, in 2008. Growing
+            up in Watts, California, Oscar lost friends to drugs, crime, and prison. He thanks his mentor and lacrosse coach,
+            Mr. Wonders, for helping him to stay on track and encouraging him to pursue higher education. Oscar ultimately
+            received an undergraduate degree in computer science from Cal Poly Pomona and a Master’s degree in Educational
+            Technology from Pepperdine University.</p>
+          <p>Teens Exploring Technology was created because many of Oscar’s adolescent experiences connected with his vision
+            to empower teens from similar communities as his . As a kid Oscar had a passion for technology, so he enrolled
+            in the only tech class offered in his school, which turned out to be a glorified typing class. Even though his
+            school didn’t offer any relevant opportunities in tech, Oscar pursued his love for technology through higher
+            education.
+          </p>
+        </div>
+      </div>
+      <div class="columns columns-padding">
+        <div class="column">
+          <p>A decade after graduating, Oscar was invited to speak with the students of Jordan High School. He was shocked to
+            learn that the school’s tech curriculum had not changed since his time as a student. Teens in his school still
+            lacked opportunities to make them competitive in the marketplace. He knew it was time to create a program that
+            would allow others in his community and similar ones to compete in the 21st century.</p>
+          <p>While working in the classroom as a teacher and also working with schools and organizations as an educational technology
+            professional, he noticed an upsetting trend. Young men of color in South Los Angeles were failing classes and
+            dropping out of high school at alarming rates. Through research, he confirmed that 55% of males drop out of school
+            in his community, which translates into high incarceration, unemployment, and death rates for African Americans
+            and Latinos.</p>
+        </div>
+        <div class="column">
+          <img src="assets/about-us/our-story-2.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+    <div id="our-mission-content" [@flyInOut]="currentState[2]">
+      <div class="columns columns-padding">
+        <div class="column">
+          <img src="assets/about-us/our-mission.jpeg" alt="">
+        </div>
+        <div class="column">
+          <p>Teens Exploring Technology (TXT) encourages inner city teenage Black and Latino males to become catalysts of change
+            in urban communities. Our approach is to use technology as a tool for promoting positive youth development and
+            leadership, and ultimately paving the pathway to higher education and majors and careers in Science, Technology
+            Engineering, Math (STEM).</p>
+        </div>
+      </div>
+    </div>
+    <div id="our-team-content" [@flyInOut]="currentState[3]">
+      <div class="columns columns-padding row-1">
+        <div class="column">
+          <div class="text">
+            <h1>Oscar Menjivar</h1>
+            <p>Founder and CEO</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+        <div class="column">
+          <div class="text">
+            <h1>Roxanne Mendez</h1>
+            <p>Board Member and Co-Founder</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+        <div class="column">
+            <div class="text">
+              <h1>Roberto Sanchez</h1>
+              <p>Developer</p>
+            </div>
+            <div class="img-content"></div>
+          </div>
+      </div>
+      <!-- <div class="columns columns-padding row-2">
+        <div class="column">
+          <div class="text">
+            <h1>Michael Morales</h1>
+            <p>Development Manager</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+        <div class="column">
+          <div class="text">
+            <h1>Danny Menjivar</h1>
+            <p>Executive Assistant</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+        <div class="column">
+          <div class="text">
+            <h1>Roberto Sanchez</h1>
+            <p>Developer</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+      </div> -->
+      <div class="columns columns-padding row-3">
+        <div class="column is-half is-offset-one-quarter">
+          <div class="text">
+            <h1>Bagel</h1>
+            <p>Chief Mascot</p>
+          </div>
+          <div class="img-content"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
