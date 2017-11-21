@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 
 import { RoutingModule} from './routing/routing.module';
-import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 // components
 import { AppComponent } from './app.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
@@ -22,7 +22,7 @@ import { MentorComponent } from './mentor/mentor.component';
 import { FellowshipComponent } from './fellowship/fellowship.component';
 import { FormsModule } from '@angular/forms';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { PhonePipePipe } from './phone-pipe.pipe';
 import { PreloadSelectedModulesList } from './config/preload_selected_modules_list';
 import { ArticleComponent } from './article/article.component';

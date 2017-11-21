@@ -52,9 +52,9 @@ const appRoutes = [
   {
     path: 'getInvolved', component: GetInvovledComponent,
     children: [
-      { path: 'volunteer', component: VolunteerComponent , data:{ preload: true}},
-      { path: 'mentor', component: MentorComponent, data:{ preload: true} },
-      { path: 'fellowship', component: FellowshipComponent, data:{ preload: true} },
+      { path: 'volunteer', component: VolunteerComponent , data: { preload: true}},
+      { path: 'mentor', component: MentorComponent, data: { preload: true} },
+      { path: 'fellowship', component: FellowshipComponent, data: { preload: true} },
       { path: '**', redirectTo: 'volunteer', pathMatch: 'full' }
     ]
   },
