@@ -31,10 +31,10 @@ const appRoutes = [
   {
     path: 'programs', component: ProgramsComponent,
     children: [
-      { path: 'SCLA', component: SclaComponent, data:{preload: true} },
-      { path: 'seals', component: SealsComponent, data:{preload: true} },
-      { path: 'leadCs', component: LeadcsComponent, data:{preload: true} },
-      { path: 'hustlencode', component: HackathonComponent, data:{preload: true} },
+      { path: 'SCLA', component: SclaComponent, data:{ preload: true} },
+      { path: 'seals', component: SealsComponent, data:{ preload: true} },
+      { path: 'leadCs', component: LeadcsComponent, data:{ preload: true} },
+      { path: 'hustlencode', component: HackathonComponent, data:{ preload: true} },
       { path: '**', redirectTo: 'SCLA', pathMatch: 'full' }
     ]
   },
@@ -52,9 +52,9 @@ const appRoutes = [
   {
     path: 'getInvolved', component: GetInvovledComponent,
     children: [
-      { path: 'volunteer', component: VolunteerComponent , data:{preload: true}},
-      { path: 'mentor', component: MentorComponent, data:{preload: true} },
-      { path: 'fellowship', component: FellowshipComponent, data:{preload: true} },
+      { path: 'volunteer', component: VolunteerComponent , data:{ preload: true}},
+      { path: 'mentor', component: MentorComponent, data:{ preload: true} },
+      { path: 'fellowship', component: FellowshipComponent, data:{ preload: true} },
       { path: '**', redirectTo: 'volunteer', pathMatch: 'full' }
     ]
   },
