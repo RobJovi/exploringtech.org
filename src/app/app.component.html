@@ -16,7 +16,7 @@
   <div id="navMenuTransparentExample" class="navbar-menu" [ngClass]="{'is-active': menuActive}">
     <div class="navbar-end">
       <a class="navbar-item " [routerLink]="['/about-us']" routerLinkActive="is-active" (click)="closeMenu()">
-        About Us
+        new menu name
       </a>
       <a class="navbar-item " href="#" [routerLink]="['/programs']" routerLinkActive="is-active" (click)="closeMenu()">
         Programs
@@ -33,8 +33,10 @@
     </div>
   </div>
 </nav>
+
 <!-- Content inserted dynamically here -->
 <router-outlet id="main-content"></router-outlet>
+
 <!-- Website Footer -->
 <div class="footer">
   <div class="columns">
